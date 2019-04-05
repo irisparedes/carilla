@@ -13,9 +13,8 @@ const btn = document.querySelector('.btn');
 
 // [X] Creo la función del listener
 const writeMood = () => {
-  console.log('click');
-  // - [] Recoge el estado del select
-  // - [] Lo pinta en pantalla
+  // - [X] Recoge el estado del select y lo pinta en pantalla
+  mood.innerHTML = moodSelector.value;
   // - [] Genera un número aleatorio
   // - [] Si es par pone amarillo correcto
   // - [] Si es impar pone fuego chileno
