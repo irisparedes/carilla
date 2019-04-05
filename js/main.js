@@ -11,13 +11,25 @@ const mood = document.querySelector('.mood');
 const moodSelector = document.querySelector('#moodSelector');
 const btn = document.querySelector('.btn');
 
+// Funcion de número aleatorio
+const getRandomInt = max => Math.floor(Math.random() * Math.floor(max));
+
 // [X] Creo la función del listener
 const writeMood = () => {
   // - [X] Recoge el estado del select y lo pinta en pantalla
   mood.innerHTML = moodSelector.value;
-  // - [] Genera un número aleatorio
-  // - [] Si es par pone amarillo correcto
-  // - [] Si es impar pone fuego chileno
+  // - [X] Genera un número aleatorio
+  const myRandomNumber = getRandomInt(100);
+  
+  if (myRandomNumber%2 === 0) {
+    // - [X] Si es par pone amarillo correcto
+    console.log(`El ${myRandomNumber} es par`);
+    app.classList.remove('fuego-chileno');
+  } else {
+    // - [X] Si es impar pone fuego chileno
+    console.log(`El ${myRandomNumber} NO es par`);
+    app.classList.add('fuego-chileno');
+  }
 };
 
 // [X] Listener al botón
