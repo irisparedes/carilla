@@ -1,6 +1,59 @@
-body {
+/* APP */
+.app {
   background-color: #fc0;
+  margin: 0;
+  font-family: arial, sans-serif;
 }
-.fuego-chileno {
+.app--fuego-chileno {
   background-color: #f90;
+}
+
+
+/* MAIN */
+.app__main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.app__mood {
+  font-weight: bold;
+  font-size: 6em;
+}
+
+/* CONFIG */
+.app__config {
+  position: absolute;
+  bottom: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__mood-label {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  display: block;
+}
+.app__btn,
+.app__mood-selector {
+  appearance: none;
+  border-radius: 3px;
+  border: 0;
+  box-shadow: 0 0 3px rgba(0,0,0,.3);
+  background: linear-gradient(to bottom, #fff, #f4f5f6);
+  line-height: 24px;
+  height: 24px;
+}
+.app__mood-selector {
+  width: 45px;
+}
+.app__btn {
+  background: linear-gradient(to bottom, #24a6e9, #016bbc);
+  color: white;
+  font-weight: bold;
+  margin-left: 15px;
 }

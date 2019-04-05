@@ -7,17 +7,21 @@
   <title>Carilla</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-  
-  <div class="mood"></div>
+<body class="app">
+  <main class="app__main">
+    
+    <div class="app__mood"></div>
 
-  <select name="moodSelector" id="moodSelector">
-    <option value=":)">:)</option>
-    <option value=":(">:(</option>
-  </select>
+    <div class="app__config">
+      <label for="moodSelector" class="app__mood-label">What is your mood today?</label>
+      <select name="moodSelector" id="moodSelector" class="app__mood-selector">
+        <option value=":)">:)</option>
+        <option value=":(">:(</option>
+      </select>
 
-  <button class="btn">Update</button>
-
+      <button class="app__btn">Update</button>
+    </div>
+  </main>
   <script src="js/main.js"></script>
 </body>
 </html>
